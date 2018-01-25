@@ -2,7 +2,7 @@ require 'cinch'
 require 'rest-client'
 require 'json'
 
-API = YAML.load_file('api.yaml')
+CONFIG = YAML.load_file('config.yaml')
 
 class NickServ
   include Cinch::Plugin
@@ -20,7 +20,7 @@ class Main
   match /HowMuchLitecoinHasChewMined/, method: :HowMuchLitecoinHasChewMined
 
   def HowMuchLitecoinHasChewMined(m)
-    api = JSON.parse(RestClient.get("https://www.litecoinpool.org/api?api_key=#{API['api']}"))
+    api = JSON.parse(RestClient.get("https://www.litecoinpool.org/api?api_key=#{CONFIG['api']}"))
     earned = api['user']['total_rewards']
     hashes = api['user']['total_work']
     price = api['market']['ltc_usd']
