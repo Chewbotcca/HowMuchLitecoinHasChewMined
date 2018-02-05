@@ -1,6 +1,7 @@
 require 'cinch'
 require 'rest-client'
 require 'json'
+require 'YAML'
 
 CONFIG = YAML.load_file('config.yaml')
 
@@ -24,8 +25,7 @@ class Main
     earned = api['user']['total_rewards']
     hashes = api['user']['total_work']
     price = api['market']['ltc_usd']
-    money = earned
-    m.reply "Chew has mined $#{earned * price} worth of Litecoin. (LTC: $#{price}) (Mined: #{money}) (Hashes Solved: #{hashes})"
+    m.reply "Chew has mined $#{earned * price} worth of Litecoin. (LTC: $#{price}) (Mined: #{earned}) (Hashes Solved: #{hashes})"
   end
 end
 
