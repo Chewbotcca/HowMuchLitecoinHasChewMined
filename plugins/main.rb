@@ -8,8 +8,6 @@ class Main
     earned = api['user']['total_rewards']
     hashes = api['user']['total_work']
     price = api['market']['ltc_usd']
-    if CONFIG['otherinvoke'] || CONFIG['otherinvoke'] == false && CONFIG['miner'] == m.user.name
-      m.reply "#{CONFIG['miner']} has mined $#{earned * price} worth of Litecoin. (LTC: $#{price}) (Mined: #{earned}) (Hashes Solved: #{hashes})"
-    end
+    m.reply "#{CONFIG['miner']} has mined $#{earned * price} worth of Litecoin. (LTC: $#{price}) (Mined: #{earned}) (Hashes Solved: #{hashes})" if CONFIG['otherinvoke'] || CONFIG['otherinvoke'] == false && CONFIG['miner'] == m.user.name
   end
 end
