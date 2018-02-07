@@ -10,19 +10,11 @@
 
 ### BOT CONFIGURATION ###
 
-# Put the nickname you want for the bot. (Ex. Chewbotcca)
-nickname:
-
 # Litecoin Miner's Nick (Ex: Chew, HowMuchLitecoinHasChewMined)
-miner: 
+miner:
 
-# Set the bot username and realname. This is optional.
-realname:
-username:
-
-# Do you run using bundle exec ruby bot.rb or just ruby bot.rb
-# true or false
-bundler: false
+# Allow others to invoke the bot? (true / false)
+otherinvoke: false
 
 ### SERVER INFORMATION ###
 
@@ -38,10 +30,10 @@ ssl: false
 ## Have a server password? Put it below! Otherwise, leave it blank!
 serverpass:
 
-# NickServ Password (Don't have nickserv account? Don't worry! Run !nsregister pass email and it will set up the rest.)]
+# NickServ Password
 # Only tested with Atheme IRC services. Report a bug if it does not work on other services.
 nickserv:
 
-### API Configuration (everything is optional)
+### Litecoinpool API Key
 
 api: ''
