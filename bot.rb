@@ -58,7 +58,6 @@ bot = Cinch::Bot.new do
     c.channels = [CONFIG['channels']]
     c.port = botport
     c.realname = botrealname
-    c.messages_per_second = 5
     c.ssl.use = botssl
     c.password = botserverpass
     c.plugins.prefix = //
